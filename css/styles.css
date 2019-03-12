@@ -1,0 +1,544 @@
+@import url("https://fonts.googleapis.com/css?family=Libre+Barcode+128+Text|Roboto|Coiny|Open+Sans|Ubuntu");
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f5f6fa;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+/* === search by city section === */
+.search-box {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 45px;
+  background: #b6c2cf;
+  border-radius: 30px;
+  padding: 10px;
+  z-index: 105;
+}
+
+.open-btn {
+  position: absolute;
+  color: #505864;
+  background: #f1f2f6;
+  float: right;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  z-index: 101;
+  overflow: hidden;
+  text-align: center;
+  font-family: "Coiny", cursive;
+  line-height: 10px;
+  display: block;
+}
+.open-btn:focus {
+  outline: none;
+}
+.open-btn:hover {
+  color: #222;
+}
+
+.search-btn {
+  font-size: 25px;
+  color: #ff4757;
+  background: #f1f2f6;
+  float: right;
+  width: 45px;
+  height: 45px;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+  z-index: 100;
+}
+.search-btn:focus {
+  outline: none;
+}
+.search-btn:active {
+  transform: scale(0.95);
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  background: none;
+  float: left;
+  font-size: 25px;
+  color: #fff;
+  line-height: 42px;
+  width: 0px;
+  transition: width 0.4s;
+}
+.search-input::placeholder {
+  color: #f1f2f6;
+}
+.red::placeholder {
+  color: #ff7675;
+}
+
+.show-search-input {
+  width: 300px;
+  padding-left: 20px;
+}
+
+/* === weather section === */
+.weather-section {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.container {
+  flex-grow: 3;
+  margin-top: 10%;
+  padding: 80px;
+  display: inline-block;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Ubuntu", sans-serif;
+  color: #2f3542;
+  font-size: 16px;
+  position: relative;
+  width: 300px;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%);
+}
+
+.info {
+  font-size: 2rem;
+}
+
+.city-title {
+  font-size: 2.8rem;
+  margin: 0;
+  margin: 15px 0 20px 0;
+  letter-spacing: 2px;
+}
+
+.city-icon {
+  width: 85px;
+  margin-top: 10px;
+}
+
+.city-description {
+  color: #57606f;
+  margin-bottom: 20px;
+}
+
+.city-temperature {
+  font-size: 2.5rem;
+  margin: 15px 0;
+  letter-spacing: 2px;
+  color: #2f3542;
+}
+
+.city-humidity {
+  letter-spacing: 2px;
+  margin: 10px 0;
+}
+
+.wind {
+  letter-spacing: 2px;
+  margin: 10px 0;
+}
+
+.sunrise {
+  letter-spacing: 2px;
+  margin: 10px 0 5px 0;
+}
+
+.sunset {
+  letter-spacing: 2px;
+  margin: 5px 0;
+}
+
+/* ===== thermometer ===== */
+
+.thermometer {
+  display: inline-block;
+  top: 3%;
+  width: 140px;
+  height: 650px;
+  border-radius: 30px;
+  box-shadow: 0 0 5px 5px #dcdde1;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.thermo-1 {
+  right: 120%;
+}
+.thermo-2 {
+  left: 120%;
+}
+
+.deg {
+  color: #fff;
+  text-shadow: 0 0 5px #333;
+  font-size: 35px;
+  padding: 2px;
+  position: absolute;
+  right: 18px;
+  top: 10px;
+  overflow: hidden;
+  z-index: 103;
+  font-family: "Coiny", cursive;
+}
+
+.glass {
+  background: #d7dfe4;
+  border-radius: 100px 100px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 505px;
+  width: 30px;
+  padding: 5px;
+  position: absolute;
+  left: 50px;
+  bottom: 65px;
+}
+.degrees {
+  font-size: 18px;
+  /* position: absolute; */
+  right: 0px;
+}
+.bar-indicator {
+  font-size: 20px;
+}
+.unit {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: absolute;
+
+  height: 500px;
+  left: 15px;
+  bottom: 85px;
+}
+.bulb {
+  background: #d7dfe4;
+  border-radius: 100px;
+  display: block;
+  height: 60px;
+  width: 60px;
+  margin: 0 35px 10px;
+  padding: 5px;
+  position: absolute;
+  bottom: 10px;
+}
+.circle {
+  /* background: #fff; */
+  border-radius: 100px;
+  display: block;
+  height: 60px;
+  width: 60px;
+  z-index: 101;
+  position: absolute;
+}
+.filler {
+  transform: rotate(180deg);
+  transform-origin: top;
+  /* background: #fff; */
+  border-radius: 0 0 100px 100px;
+  display: block;
+  width: 30px;
+  position: absolute;
+  top: 35px;
+  right: 20px;
+  z-index: 100;
+  transition: height 2s;
+}
+.filler-1 {
+  height: 0px;
+  /* 4px = 1'F */
+}
+.filler-2 {
+  height: 0px;
+  /* 6px = 1'C */
+}
+
+/* ===== arrow box ===== */
+.arrow-box {
+  position: absolute;
+  background: #fff;
+  border-radius: 10px;
+  border: 3px solid #7f8fa6;
+  width: 120px;
+  height: 70px;
+  text-align: right;
+  padding-right: 10px;
+  line-height: 70px;
+  /* overflow: hidden; */
+  color: #6b7685;
+  font-size: 2rem;
+  font-weight: 600;
+  transition: top 2s;
+  font-family: "Ubuntu", sans-serif;
+  display: block;
+}
+.arr1 {
+  right: -180px;
+  top: 0px;
+}
+.arr1::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 130px;
+  border: solid 20px transparent;
+  border-right-color: #7f8fa6;
+}
+.arr2 {
+  right: 115px;
+  top: 0px;
+}
+.arr2::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: -40px;
+  /* z-index: 1; */
+  border: solid 20px transparent;
+  border-left-color: #7f8fa6;
+}
+
+.odometer {
+  font-size: 2.2rem;
+  padding-right: 5px;
+  margin-bottom: 5px;
+}
+
+/* === below 1000px === */
+@media (max-width: 1000px) {
+  .weather-section {
+    margin: 0 auto;
+    max-width: 700px;
+  }
+  .thermometer {
+    width: 110px;
+    height: 630px;
+  }
+  .thermo-1 {
+    right: 100%;
+  }
+  .thermo-2 {
+    left: 100%;
+  }
+  .deg {
+    font-size: 25px;
+    padding: 2px;
+    right: 18px;
+    top: 10px;
+  }
+  .glass {
+    width: 25px;
+    left: 37.5px;
+  }
+  .degrees {
+    font-size: 15px;
+  }
+  .unit {
+    height: 485px;
+    left: 2px;
+  }
+  .bulb {
+    height: 50px;
+    width: 50px;
+    margin: 0 25px 10px;
+  }
+  .circle {
+    height: 50px;
+    width: 50px;
+  }
+  .filler {
+    width: 24px;
+    right: 18px;
+  }
+  .arrow-box {
+    display: none;
+  }
+  .info {
+    font-size: 1.6rem;
+  }
+  .city-title {
+    font-size: 2.3rem;
+  }
+  .city-icon {
+    width: 65px;
+  }
+  .city-temperature {
+    font-size: 2.1rem;
+  }
+}
+
+/* === below 790px === */
+@media (max-width: 790px) {
+  .search-box {
+    top: 70px;
+    height: 40px;
+    border-radius: 30px;
+  }
+  .open-btn {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+  }
+  .search-btn {
+    font-size: 20px;
+    width: 42px;
+    height: 42px;
+    padding: 10px;
+  }
+  .search-input {
+    font-size: 23px;
+    line-height: 40px;
+  }
+  .show-search-input {
+    width: 250px;
+  }
+  .thermometer {
+    width: 100px;
+    height: 630px;
+  }
+  .thermo-1 {
+    right: 90%;
+    top: 10%;
+  }
+  .thermo-2 {
+    left: 90%;
+    top: 10%;
+  }
+  .deg {
+    font-size: 25px;
+    padding: 2px;
+    right: 18px;
+    top: 10px;
+  }
+  .glass {
+    width: 25px;
+    left: 35px;
+  }
+  .unit {
+    left: 2px;
+  }
+  .filler {
+    width: 24px;
+    right: 18px;
+  }
+  .bulb {
+    height: 50px;
+    width: 50px;
+    margin: 0 22px 10px;
+  }
+  .circle {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+/* === below 681px === */
+@media (max-width: 681px) {
+  .search-box {
+    width: 250px;
+    height: 35px;
+    padding: 5px;
+  }
+  .search-input {
+    width: 150px;
+    font-size: 17px;
+    line-height: 35px;
+    padding-left: 15px;
+  }
+  .open-btn {
+    display: none;
+  }
+  .search-btn {
+    font-size: 18px;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+  }
+}
+
+/* === below 610px === */
+@media (max-width: 610px) {
+  /* .thermometer {
+    display: none;
+  } */
+  .thermometer {
+    width: 40px;
+    height: 600px;
+    top: 15%;
+  }
+  .deg {
+    font-size: 25px;
+    padding: 2px;
+    right: 18px;
+    top: 10px;
+  }
+  .glass {
+    width: 10px;
+    left: 10px;
+    z-index: -2;
+  }
+  .unit {
+    top: 40px;
+    left: 0px;
+  }
+  .filler {
+    width: 12px;
+    right: 14px;
+    z-index: -1;
+  }
+  .bulb {
+    background: #d7dfe4;
+    border-radius: 100px;
+    display: block;
+    height: 30px;
+    width: 30px;
+    margin: 0;
+    padding: 5px;
+    position: absolute;
+    bottom: 30px;
+    z-index: -2;
+  }
+  .circle {
+    height: 30px;
+    width: 30px;
+    z-index: 101;
+    /* z-index: -1; */
+  }
+  .deg {
+    font-size: 18px;
+    right: 11px;
+    top: 6px;
+  }
+  .container {
+    padding: 0;
+    padding-top: 80px;
+  }
+  .info {
+    font-size: 1.3rem;
+  }
+  .city-title {
+    font-size: 2.15rem;
+  }
+  .city-icon {
+    width: 65px;
+  }
+  .city-temperature {
+    font-size: 1.9rem;
+  }
+}
