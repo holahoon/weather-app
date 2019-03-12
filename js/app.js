@@ -203,6 +203,9 @@ search_form.addEventListener("submit", event => {
       }
     });
   }
+
+  // Hide mobile soft keyboard upon submit
+  search_input.blur();
 });
 
 function gauge(temp) {
