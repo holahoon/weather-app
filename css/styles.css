@@ -477,10 +477,14 @@ body {
   /* .thermometer {
     display: none;
   } */
+  .search-box {
+    top: 50px;
+    width: 200px;
+  }
   .thermometer {
     width: 40px;
     height: 600px;
-    top: 15%;
+    top: -5%;
   }
   .deg {
     font-size: 25px;
