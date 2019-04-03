@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- odometer css theme -->
+    <link rel="stylesheet" href="css/odometer-theme-default.css">
+    <!-- chartJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+    <!-- odometer JS -->
+    <script src="js/odometer.min.js"></script>
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="main">
+
+       <!-- search by city -->
+       <div class="form-parent">
+          <form id="search-form" class="search-box" action="">
+            <input type="text" class="search-input" placeholder="search city" />
+            <button class="open-btn">search</button>
+            <button type="submit" id="search-city" class="search-btn">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+        <!-- end of search by city -->
+
+      <div class="main-flex">
+        
+
+        <!-- display weather info -->
+        <div id="weather" class="weather-section">
+        
+          <div class="container">
+
+                <!-- fahrenheit thermometer -->
+        <div class="thermometer thermo-1">
+          <span class="glass"></span>
+            <span class="unit">
+              <div class="degrees">100</div><span class="bar-indicator">-</span>
+              <!-- <div class="degrees">90</div> -->
+              <div class="degrees">80</div><span class="bar-indicator">-</span>
+              <!-- <div class="degrees">70</div> -->
+              <div class="degrees">60</div><span class="bar-indicator">-</span>
+              <!-- <div class="degrees">50</div> -->
+              <div class="degrees">40</div><span class="bar-indicator">-</span>
+              <!-- <div class="degrees">30</div> -->
+              <div class="degrees">20</div><span class="bar-indicator">-</span>
+              <!-- <div class="degrees">10</div> -->
+              <div class="degrees">0</div><span class="bar-indicator">-</span>
+              <div class="degrees">-20</div>
+            </span>
+      
+          <div class="bulb">
+            <span class="arrow-box arr1"><span id="odometer" class="odometer odo1"></span>&#176;F</span>
+            <span class="circle c1"></span>
+            <span class="fahrenheit deg">&#176;F</span>
+            <span class="filler filler-1"></span>
+          </div>
+        </div>
+        <!-- end of fahrenheit thermometer -->
+
+      <div class="info">
+            <h1 class="city-title"></h1>
+            <img class="city-icon" src="#" alt=""></img>
+            <div class="city-description"></div>
+            <h2 class="city-temperature"></h2>
+            <div class="city-humidity"></div>
+            <div class="wind"></div>
+            <div class="sunrise"></div>
+            <div class="sunset"></div>
+      </div>
+            <!-- celsius thermometer -->
+        <div class="thermometer thermo-2">
+          <span class="glass"></span>
+          <span class="unit">
+            <div class="degrees">40</div><span class="bar-indicator">-</span>
+            <!-- <div class="degrees">50</div> -->
+            <div class="degrees">20</div><span class="bar-indicator">-</span>
+            <!-- <div class="degrees">30</div> -->
+            <div class="degrees">0</div><span class="bar-indicator">-</span>
+            <!-- <div class="degrees">10</div> -->
+            <div class="degrees">-20</div><span class="bar-indicator">-</span>
+            <div class="degrees">-40</div>
+          </span>
+
+          <div class="bulb">
+            <span class="arrow-box arr2"><span id="odometer" class="odometer odo2"></span>&#176;C</span>
+            <span class="circle c2"></span>
+            <span class="celsius deg">&#176;C</span>
+            <span class="filler filler-2"></span>
+          </div>
+
+          <!-- <span class="arrow-box"></span> -->
+        </div>
+        <!-- end of celsius thermometer -->
+
+          </div>
+
+        </div>
+        <!-- end of display weather info -->
+      </div>
+    </div>
+    
+
+    <!-- footer -->
+    <!-- <footer class="footer"><p>Created by David Kim</p></footer> -->
+    <!-- end of footer -->
+
+    <!-- JS -->
+    <script src="js/app.js"></script>
+  </body>
+</html>
