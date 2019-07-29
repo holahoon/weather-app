@@ -13,6 +13,6 @@ A weather application that displays weather information of the current or search
 * Search for any cities in U.S in the search bar
 
 ## Built With
-* Plain Vanilla JavaScript
+* HTML, CSS and Plain Vanilla JavaScript
 * Utilized [OpenWeatherMap API](https://openweathermap.org/) to fetch data from
 
