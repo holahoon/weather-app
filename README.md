@@ -12,7 +12,7 @@ A weather application that displays weather information of the current or search
 * When page initially loads, click allow to enable access to the current location so that the application can successfully display the weather at the current location
 * Search for any cities in U.S in the search bar
 
-## Built With
+## Built with
 * HTML, CSS and Plain Vanilla JavaScript
 * Utilized [OpenWeatherMap API](https://openweathermap.org/) to fetch data from
 
